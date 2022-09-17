@@ -24,9 +24,9 @@ public class UserServiceImpl extends UserValidator implements UserService {
 
         validate(user);
 
-        if (userRepository.ifUserExist(user.getFirstName() , user.getLastName())){
-            throw new ResponseStatusException(HttpStatus.CONFLICT , "User already exist");
-        }
+//        if (userRepository.ifUserExist(user.getFirstName() , user.getLastName())){
+//            throw new ResponseStatusException(HttpStatus.CONFLICT , "User already exist");
+//        }
 
         if (userRepository.ifEmailExist(user.getEmail())){
             throw new ResponseStatusException(
